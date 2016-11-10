@@ -1,0 +1,49 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.module.js",
+  "scripts": {
+    "cleanup": "rimraf dist/",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "test": "karma start karma.conf.js",
+    "dev-build": "npm install && npm run dev",
+    "prod-build": "npm install && npm run prod && npm run test-single-run",
+    "dev": "npm run cleanup && webpack",
+    "dev-serve": "webpack-dev-server --config webpack.config.hot.js --content-base dist/ --hot --inline --port 8081",
+    "prod": "npm run cleanup && webpack --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nony1992/toDo-list.git"
+  },
+  "author": "nony1992",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nony1992/toDo-list/issues"
+  },
+  "homepage": "https://github.com/nony1992/toDo-list#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "copy-webpack-plugin": "^4.0.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.9.1",
+    "eslint-loader": "^1.6.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "ng-annotate-loader": "^0.2.0",
+    "ngtemplate-loader": "^1.3.1",
+    "node-sass": "^3.11.2",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-config": "^6.2.1",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2"
+  }
+}
