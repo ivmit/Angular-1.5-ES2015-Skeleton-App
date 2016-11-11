@@ -3,10 +3,12 @@
  */
 
 import angular from 'angular';
-import { ToDoListModule } from './to-do-list/to-do-list.module';
+import { TodoFormModule } from './todo-form/todo-form.module'; //statless dumb component
+import { TodoModule } from './todo/todo.module'; //statefull smart component
 
 export const ComponentsModule  = angular
     .module('app.components', [
-        ToDoListModule
+        TodoFormModule,
+        TodoModule
     ])
     .name;
